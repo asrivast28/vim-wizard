@@ -63,4 +63,8 @@ endfunction
 " map the previous function to leader + D
 nnoremap <leader>D :call Ycm_goto_decl()<CR>
 
+Plugin 'scons.vim'
+" always set file type of SConstruct/SConscript
+autocmd BufNew,BufRead SCons* set filetype=scons
+
 filetype plugin indent on

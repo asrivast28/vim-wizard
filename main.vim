@@ -60,8 +60,6 @@ set scrolloff=3
 set number
 " no line wrapping
 set nowrap
-" always set file type of SConstruct to python
-autocmd BufNew,BufRead SConstruct setf python
 
 "set diffexpr=MyDiff()
 "function MyDiff()
