@@ -24,6 +24,9 @@ map <C-n> :NERDTreeToggle<CR>
 
 Plugin 'scrooloose/nerdtree.git'
 
+" VIM Latex Suite
+Plugin 'jcf/vim-latex'
+
 " checks syntax
 Plugin 'scrooloose/syntastic.git'
 " always show the error list at the bottom of the screen

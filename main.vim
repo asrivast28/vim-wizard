@@ -85,3 +85,6 @@ set nowrap
   "endif
   "silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 "endfunction
+
+" enable automatic text wrapping, and enable english spell check
+autocmd BufRead,BufNewFile  *.tex setlocal tw=80 spell spelllang=en_us
