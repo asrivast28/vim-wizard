@@ -90,8 +90,13 @@ flags = [
 '-isystem',
 '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include',
 '-I',
-'/usr/include/mpi',
 ]
+
+import platform
+if platform.system() == 'Darwin':
+    flags.append('/opt/local/include/openmpi-mp')
+else:
+    flags.append('/usr/include/mpi')
 
 
 # Set this to the absolute path to the folder (NOT the file!) containing the
