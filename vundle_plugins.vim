@@ -26,6 +26,10 @@ Plugin 'scrooloose/nerdtree.git'
 
 " VIM Latex Suite
 Plugin 'jcf/vim-latex'
+" disable automatic conversion of double quotes
+let g:Tex_SmartKeyQuote=0
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_MultipleCompileFormats='pdf,bib,pdf'
 
 " checks syntax
 Plugin 'scrooloose/syntastic.git'

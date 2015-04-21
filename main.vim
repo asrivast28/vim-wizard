@@ -87,4 +87,4 @@ set nowrap
 "endfunction
 
 " enable automatic text wrapping, and enable english spell check
-autocmd BufRead,BufNewFile  *.tex setlocal tw=80 spell spelllang=en_us
+autocmd BufRead,BufNewFile *.tex setlocal wrap linebreak nolist tw=0 wrapmargin=0 spell spelllang=en_us
