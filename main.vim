@@ -90,5 +90,11 @@ set cursorline cursorcolumn
   "silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 "endfunction
 
-" enable automatic text wrapping, and enable english spell check
-autocmd BufRead,BufNewFile *.tex setlocal wrap linebreak nolist tw=0 wrapmargin=0 spell spelllang=en_us
+" enable automatic text wrapping, and enable english spell check for LaTeX files
+au BufRead,BufNewFile *.tex setlocal wrap linebreak nolist tw=0 wrapmargin=0 spell spelllang=en_us
+" set indentation scheme for Python files
+au FileType python setlocal softtabstop=4 tabstop=4 shiftwidth=4
+" set indentation scheme for R files
+au FileType r setlocal softtabstop=8 tabstop=8 shiftwidth=8
+" set ANML file type
+au BufRead,BufNewFile *.anml set filetype=xml
