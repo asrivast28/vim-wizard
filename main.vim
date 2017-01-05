@@ -37,7 +37,7 @@ set smartcase
 syntax on
 filetype plugin indent on
 " change working directory
-autocmd BufEnter * lcd %:p:h
+au BufEnter * lcd %:p:h
 " virtual edit in blocks
 set virtualedit=block
 " no need to add modifiers during pattern search 
@@ -53,13 +53,17 @@ set hidden
 " set visualbell
 " Disable error bells.
 set noerrorbells visualbell t_vb=
-autocmd GUIEnter * set visualbell t_vb=
+au GUIEnter * set visualbell t_vb=
 " scroll when 3 lines from border (instead of when exactly at the border)
 set scrolloff=3
 " line numbering
 set number
 " no line wrapping
 set nowrap
+" highlight the current line and column
+au WinLeave * set nocursorline nocursorcolumn
+au WinEnter * set cursorline cursorcolumn
+set cursorline cursorcolumn
 
 "set diffexpr=MyDiff()
 "function MyDiff()
