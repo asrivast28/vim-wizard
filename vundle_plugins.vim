@@ -8,6 +8,8 @@ call vundle#rc()
 Plugin 'gmarik/vundle'
 
 Plugin 'cscope.vim'
+" This seems to be required now.
+let g:cscope_cmd='cscope'
 
 Plugin 'autoload_cscope.vim'
 
