@@ -8,4 +8,7 @@ fi
 
 # install Ycm
 cd ~/.vim/bundle/YouCompleteMe
-./install.sh --clang-completer
+# checkout verified commit
+git checkout 3066488ecf5cb289e1d93b56cc48041b5d3ec57c
+# install
+./install.sh --clang-completer --enable-coverage
