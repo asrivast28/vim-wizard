@@ -7,12 +7,6 @@ call vundle#rc()
 " 'user/repository' format
 Plugin 'gmarik/vundle'
 
-Plugin 'cscope.vim'
-" This seems to be required now.
-let g:cscope_cmd='cscope'
-
-Plugin 'autoload_cscope.vim'
-
 Plugin 'DoxygenToolkit.vim'
 let g:DoxygenToolkit_authorName = 'Ankit Srivastava <asrivast@gatech.edu>'
 let g:DoxygenToolkit_versionString = '1.0'
@@ -79,5 +73,9 @@ autocmd BufNew,BufRead SCons* set filetype=scons
 " for markdown preview
 Plugin 'JamshedVesuna/vim-markdown-preview'
 let vim_markdown_preview_github=1
+
+" for cscope
+Plugin 'gnattishness/cscope_maps'
+set nocscopeverbose
 
 filetype plugin indent on
