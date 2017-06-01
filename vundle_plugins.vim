@@ -15,10 +15,10 @@ map <leader>dxa :DoxAuthor<CR>
 map <leader>dx :Dox<CR>
 
 " comment
-Plugin 'scrooloose/nerdcommenter.git'
+Plugin 'scrooloose/nerdcommenter'
 map <C-n> :NERDTreeToggle<CR>
 
-Plugin 'scrooloose/nerdtree.git'
+Plugin 'scrooloose/nerdtree'
 
 " VIM Latex Suite
 Plugin 'jcf/vim-latex'
@@ -28,20 +28,21 @@ let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_MultipleCompileFormats='pdf,bib,pdf'
 
 " checks syntax
-Plugin 'scrooloose/syntastic.git'
+Plugin 'scrooloose/syntastic'
 " always show the error list at the bottom of the screen
 let g:syntastic_always_populate_loc_list=1
 " configure syntastic for python to use also use PEP8
 let g:syntastic_python_checkers=['python', 'pep8']
 
 " automatic completion
-Plugin 'Valloric/YouCompleteMe.git'
+Plugin 'Valloric/YouCompleteMe'
 " Configure YouCompleteMe.
 " let g:ycm_add_preview_to_completeopt=0
 " let g:ycm_confirm_extra_conf=0
 " set completeopt-=preview
 " use the YCM default clang flags config in case none is set
 " let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_server_python_interpreter = '/usr/bin/python'
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
 " function for checking if the current file is supported
 function! Ycm_supports_file()
@@ -64,7 +65,7 @@ function! Ycm_goto_decl()
     endif
 endfunction
 " map the previous function to leader + D
-nnoremap <leader>D :call Ycm_goto_decl()<CR>
+nmap <leader>D :call Ycm_goto_decl()<CR>
 
 Plugin 'scons.vim'
 " always set file type of SConstruct/SConscript
@@ -77,5 +78,14 @@ let vim_markdown_preview_github=1
 " for cscope
 Plugin 'gnattishness/cscope_maps'
 set nocscopeverbose
+
+" for showing ctags on the fly
+Plugin 'majutsushi/tagbar'
+" show the tagbar on the left
+let g:tagbar_left=1
+nmap <F2> :TagbarToggle<CR> 
+nmap <F3> :TagbarCurrentTag<CR>
+
+Plugin 'dkprice/vim-easygrep'
 
 filetype plugin indent on
