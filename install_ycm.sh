@@ -8,7 +8,5 @@ fi
 
 # install Ycm
 cd ~/.vim/bundle/YouCompleteMe
-# checkout verified commit
-git checkout 3066488ecf5cb289e1d93b56cc48041b5d3ec57c
 # install
 ./install.py --clang-completer --enable-coverage
