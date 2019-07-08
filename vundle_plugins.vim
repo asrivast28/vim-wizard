@@ -90,4 +90,9 @@ nmap <F3> :TagbarCurrentTag<CR>
 
 Plugin 'dkprice/vim-easygrep'
 
+Plugin 'morhetz/gruvbox'
+set background=dark
+let g:gruvbox_contrast_dark='hard'
+colorscheme gruvbox
+
 filetype plugin indent on
