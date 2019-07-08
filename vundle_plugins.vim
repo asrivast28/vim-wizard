@@ -31,8 +31,10 @@ let g:Tex_MultipleCompileFormats='pdf,bib,pdf'
 Plugin 'scrooloose/syntastic'
 " always show the error list at the bottom of the screen
 let g:syntastic_always_populate_loc_list=1
-" configure syntastic for python to use also use PEP8
-let g:syntastic_python_checkers=['python', 'pep8']
+" configure syntastic for python; also use PEP8
+"let g:syntastic_python_checkers=['python', 'pep8']
+" configure syntastic for python3; also use PEP8
+let g:syntastic_python_checkers=['flake8', 'pep8']
 
 " automatic completion
 Plugin 'Valloric/YouCompleteMe'
