@@ -2,8 +2,8 @@
 
 # install requirements (ubuntu only)
 if [ "$(whoami)" == "root" ]; then
-  apt-get install build-essential cmake
-  apt-get install python-dev
+  apt install build-essential cmake
+  apt install python-dev
 fi
 
 # install Ycm
