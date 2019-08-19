@@ -75,6 +75,7 @@ autocmd BufNew,BufRead SCons* set filetype=scons
 
 " for markdown preview
 Plugin 'JamshedVesuna/vim-markdown-preview'
+let vim_markdown_preview_toggle=1
 let vim_markdown_preview_github=1
 
 " for cscope
