@@ -26,6 +26,10 @@ Plugin 'jcf/vim-latex'
 let g:Tex_SmartKeyQuote=0
 let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_MultipleCompileFormats='pdf,bib,pdf'
+if has("unix") && match(system("uname"),'Darwin') != -1
+  " It's a Mac!
+  let g:Tex_ViewRule_pdf='open -a Preview'
+endif
 
 " checks syntax
 Plugin 'scrooloose/syntastic'
